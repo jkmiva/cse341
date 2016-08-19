@@ -8,7 +8,7 @@ fun same_string(s1 : string, s2 : string) =
 
 (* put your solutions for problem 1 here *)
 
-(* a *)
+(* a
 fun all_except_option (str, strlst) =
   let fun getSub (istr,ret) =
         case istr of
@@ -19,6 +19,18 @@ fun all_except_option (str, strlst) =
   in
     getSub (strlst,[])
   end
+*)
+
+(* a without @ operand, but the former one use tail recursion*)
+fun all_except_option (str, strlst) =
+  case strlst of
+      [] => NONE
+    | s::strlst' => if same_string (str, s)
+                    then SOME strlst'
+                    else case all_except_option(str,strlst') of
+                             NONE => NONE
+                           | SOME lst => SOME (s::lst)
+
 
 (* b *)
 fun get_substitutions1 (strlsts, str) =
@@ -46,7 +58,7 @@ fun get_substitutions2 (strlsts, str) =
     getSub(strlsts,[])
   end
 
-(* d *)
+(* d
 fun similar_names (strlsts, {first=f,middle=m,last=l})=
   let fun getSub(istr, ret) =
         case istr of
@@ -58,6 +70,20 @@ fun similar_names (strlsts, {first=f,middle=m,last=l})=
       getSub(sub,[{first=f,middle=m,last=l}])
     end
   end
+*)
+
+(* d without @operand, but the former one use tail recursion *)
+fun similar_names (strlsts, name) =
+  let val {first=f, middle=m, last=l} = name
+      fun make_names xs =
+        case xs of
+            [] => []
+          | x::xs' => {first=x, middle=m, last=l}::(make_names xs')
+  in
+    name::make_names(get_substitutions2(strlsts,f))
+  end
+
+
 
 (* you may assume that Num is always used with values 2, 3, ..., 10
    though it will not really come up *)
@@ -89,7 +115,7 @@ fun card_value x =
     | _ => 10
 
 
-(* c *)
+(* c
 fun remove_card (cs, c, e) =
   let fun getSub (cs, ret) =
         case cs of
@@ -100,6 +126,15 @@ fun remove_card (cs, c, e) =
   in
     getSub(cs,[])
   end
+*)
+
+(* c without @operand , but the former one use tail recursion *)
+fun remove_card (cs, c, e) =
+  case cs of
+      [] => raise e
+    | x::cs' => if x = c
+                then cs'
+                else x::remove_card(cs',c,e)
 
 
 (* d *)
