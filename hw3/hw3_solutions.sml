@@ -75,12 +75,12 @@ fun all_answers f xs =
   let
     fun helper (xs, acc) =
       case xs of
-          [] => acc
+          [] => SOME acc
         | x::xs' => case f x of
                         NONE => NONE
-                      | SOME lst => helper(xs', SOME (lst @ (valOf acc)))
+                      | SOME lst => helper(xs', lst @ acc)
   in
-    helper (xs,SOME [])
+    helper (xs,[])
   end
 
 
@@ -91,7 +91,7 @@ fun count_wildcards p =
 
 (** b **)
 fun count_wild_and_variable_lengths p =
-  g (fn () => 1) (fn x => String.size x) p
+  g (fn () => 1) String.size p
 
 (** c **)
 fun count_some_var (s,p) =
