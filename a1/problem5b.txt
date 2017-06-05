@@ -1,0 +1,10 @@
+f = \x.(x + 1)
+g = \y.(y * 2)
+h = \z.(z / 3)
+compose3 = \x.\y.\z.\n(x (y (z n))) f g h
+         = \y.\z.\n(f (y (z n))) g h
+         = \z.\n(f (g (z n))) h
+         = \n.(f (g (h n)))
+         = (((n/3)*2)+1)
+-- After taking three functions as arguments, compose3 evaluated to
+   a function with type (Double -> Double)

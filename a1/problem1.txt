@@ -1,0 +1,8 @@
+-- Author : Huang Jiaming
+-- StuID  : 11207964
+-- NSID   : jih211
+Q1.
+    a)  swap :: (Int, Int) -> (Int, Int)
+    b)  pair :: Int -> Int -> (Int, Int)
+    c)  double :: Int -> Int
+    d)  twice :: (Int -> Int) -> Int -> Int

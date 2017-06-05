@@ -1,0 +1,13 @@
+*Main> :reload
+[1 of 1] Compiling Main             ( problem3.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> luhnDouble 3
+6
+*Main> luhnDouble 6
+3
+*Main> luhn 1 7 8 4
+True
+*Main> luhn 4 7 8 3
+False
+*Main> 
+

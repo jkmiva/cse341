@@ -1,0 +1,43 @@
+% Name: Huang Jiaming
+% NSID: jih211
+% stuID:11207964
+
+1.
+a) No.  london and paris are not systactically identical.
+b) Yes. {X=X1, Y=Y1, Z=Z1}
+c) No.  functors are different.
+d) No.  f(X)=X not allowed
+e) Yes. {}
+f) No.  X=a contradicts with X=b
+g) Yes. {X=b, Z=b}
+h) No.  Z=c contradicts with Z=b
+i) Yes. {X=d, Z=b}
+j) Yes. {A=17, B=17, C=34, D=17, E=17, Z=34}
+
+
+4.
+a)
+?- stepmother_of(camilla, harry).
+true.
+
+b)
+?- married_to(T, charles), mother_of(T, Ret).
+T = diana,
+Ret = william ;
+T = diana,
+Ret = harry ;
+false.
+
+c)
+?- stepmother_of(camilla, X).
+X = william ;
+X = harry ;
+false.
+
+d)
+?- grandchild_of(william, Ret),grandchild_of(harry, Ret).
+Ret = elizabeth ;
+Ret = philip.
+
+?- 
+

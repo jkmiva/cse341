@@ -1,0 +1,62 @@
+Input an integer to specify the number of mam or woman:
+5
+rank list is created randomly in ascending order, e.g.(Priority of rank[i] < Priority of rank[i+1])
+-- Men rank lists --
+man_0: 0, 3, 1, 4, 2, 
+man_1: 1, 4, 0, 3, 2, 
+man_2: 4, 0, 2, 1, 3, 
+man_3: 1, 4, 3, 0, 2, 
+man_4: 2, 3, 4, 1, 0, 
+-- Women rank lists --
+woman_0: 3, 0, 2, 4, 1, 
+woman_1: 3, 1, 0, 2, 4, 
+woman_2: 0, 3, 4, 2, 1, 
+woman_3: 4, 0, 1, 3, 2, 
+woman_4: 4, 3, 1, 2, 0, 
+-- Stable match --
+man_0 : woman_0
+man_1 : woman_1
+man_2 : woman_4
+man_3 : woman_3
+man_4 : woman_2
+
+
+
+
+Input an integer to specify the number of mam or woman:
+10
+rank list is created randomly in ascending order, e.g.(Priority of rank[i] < Priority of rank[i+1])
+-- Men rank lists --
+man_0: 1, 2, 5, 4, 0, 7, 3, 6, 9, 8, 
+man_1: 7, 9, 0, 5, 1, 8, 3, 6, 2, 4, 
+man_2: 3, 8, 0, 6, 2, 9, 5, 4, 1, 7, 
+man_3: 2, 0, 8, 4, 1, 5, 7, 6, 9, 3, 
+man_4: 8, 0, 1, 7, 6, 9, 2, 3, 4, 5, 
+man_5: 5, 6, 4, 0, 1, 2, 8, 9, 7, 3, 
+man_6: 7, 1, 5, 8, 6, 3, 0, 2, 9, 4, 
+man_7: 9, 0, 6, 7, 8, 3, 1, 4, 2, 5, 
+man_8: 2, 4, 5, 0, 3, 8, 6, 9, 1, 7, 
+man_9: 4, 6, 9, 0, 8, 5, 2, 1, 3, 7, 
+-- Women rank lists --
+woman_0: 4, 7, 9, 0, 6, 8, 2, 5, 1, 3, 
+woman_1: 6, 0, 9, 5, 2, 8, 4, 7, 1, 3, 
+woman_2: 8, 0, 2, 9, 3, 5, 6, 4, 1, 7, 
+woman_3: 5, 6, 7, 1, 9, 4, 0, 3, 2, 8, 
+woman_4: 4, 0, 2, 9, 3, 7, 6, 5, 1, 8, 
+woman_5: 8, 5, 6, 7, 3, 9, 0, 4, 2, 1, 
+woman_6: 6, 2, 1, 0, 8, 3, 4, 7, 9, 5, 
+woman_7: 9, 2, 0, 1, 3, 6, 5, 8, 7, 4, 
+woman_8: 0, 5, 1, 9, 2, 8, 6, 3, 4, 7, 
+woman_9: 2, 9, 1, 8, 4, 6, 5, 0, 3, 7, 
+-- Stable match --
+man_0 : woman_1
+man_1 : woman_0
+man_2 : woman_3
+man_3 : woman_2
+man_4 : woman_8
+man_5 : woman_5
+man_6 : woman_7
+man_7 : woman_9
+man_8 : woman_4
+man_9 : woman_6
+

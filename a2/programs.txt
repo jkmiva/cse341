@@ -1,0 +1,129 @@
+Name : Huang Jiaming
+NSID : jih211
+StuId: 11207964
+
+// program 2
+*Main> :t Main.curry
+Main.curry :: ((t1, t2) -> t) -> t1 -> t2 -> t
+*Main> :t Main.uncurry
+Main.uncurry :: (t1 -> t2 -> t) -> (t1, t2) -> t
+
+// program 3
+*Main> a
+MyFloat 3297 2
+*Main> b
+MyFloat 329 5
+*Main> c
+MyFloat (-32000) 5
+*Main> d
+MyFloat (-3297) 2
+*Main> e
+MyFloat 4398 3
+*Main> a<b
+True
+*Main> -d
+MyFloat 3297 2
+*Main> a == -d
+True
+*Main> b>a
+True
+*Main> c <= a
+True
+*Main> b >= e
+True
+*Main> c < d
+True
+*Main> -b
+MyFloat (-329) 5
+*Main> a
+MyFloat 3297 2
+*Main> b
+MyFloat 329 5
+*Main> a+b
+MyFloat 3293297 5
+*Main> a-b
+MyFloat (-3286703) 5
+*Main> a*b
+MyFloat 1084713 7
+*Main> a/b          ---Notes : precision of (/) is at least 10^5
+MyFloat 10021277 (-2)
+*Main> d
+MyFloat (-3297) 2
+*Main> e
+MyFloat 4398 3
+*Main> d+e
+MyFloat 40683 3
+*Main> d-e
+MyFloat (-47277) 3
+*Main> e-d
+MyFloat 47277 3
+*Main> e*d
+MyFloat (-14500206) 5
+*Main> d/e
+MyFloat (-749659) (-1)
+*Main> a
+MyFloat 3297 2
+*Main> whole a
+32
+*Main> fraction a
+0.97
+*Main> d
+MyFloat (-3297) 2
+*Main> whole d
+-32
+*Main> fraction d
+0.97
+*Main> b
+MyFloat 329 5
+*Main> whole b
+32900
+*Main> fraction b
+0.0
+*Main> c
+MyFloat (-32000) 5
+*Main> whole c
+-32000
+*Main> fraction c
+0.0
+
+// problem 4
+*Main> shuffle [1,2,3] [4,5,6]
+[1,4,2,5,3,6]
+*Main> shuffle [1,2,3] [4,5,6,7,8]
+[1,4,2,5,3,6,7,8]
+*Main> shuffle [1,2,3,8,9] [4,5,6]
+[1,4,2,5,3,6,8,9]
+
+// problem 5
+*Main> split [1,2,3,4,5] 2
+([1,2],[3,4,5])
+*Main> split [1,2,3,4,5] 7
+([1,2,3,4,5],[])
+
+// problem 6
+*Main> nshuffle 5 0
+"bbbbbrrrrr"
+*Main> nshuffle 5 1
+"brbrbrbrbr"
+*Main> nshuffle 5 2
+"brrbbrrbbr"
+*Main> nshuffle 5 3
+"brrrrbbbbr"
+*Main> nshuffle 5 4
+"bbrbrbrbrr"
+
+// problem 7
+*Main> consecutive [1,2,2,3,4]
+2
+*Main> consecutive [1,2,2,3,3,3,4]
+3
+*Main> consecutive [1,2,2,2,3,3,3,4]
+3
+*Main> consecutive [1,2,3,4]
+1
+*Main> consecutive [1,2,3,4,4,4,4]
+4
+
+
+
+

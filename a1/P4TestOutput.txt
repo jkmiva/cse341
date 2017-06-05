@@ -1,0 +1,28 @@
+Prelude> :load problem4.hs 
+[1 of 1] Compiling Main             ( problem4.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> averageThree 1 2 3
+2.0
+*Main> averageThree 1 2 4
+2.3333333333333335
+*Main> howManyAboveAverage 1 1 1
+0
+*Main> howManyAboveAverage 1 2 3
+1
+*Main> howManyAboveAverage 1 9 10
+2
+*Main> averageThreeInOne (1,2,3)
+2.0
+*Main> averageThreeInOne (1,2,4)
+2.3333333333333335
+*Main> orderTriple (1,1,1)
+(1,1,1)
+*Main> orderTriple (1,2,3)
+(1,2,3)
+*Main> orderTriple (4,2,3)
+(2,3,4)
+*Main> orderTriple (1,7,3)
+(1,3,7)
+*Main> orderTriple (3,3,1)
+(1,3,3)
+*Main> 

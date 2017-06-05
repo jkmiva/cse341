@@ -1,0 +1,23 @@
+*Main> :load problem2.hs 
+[1 of 1] Compiling Main             ( problem2.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> fastExp1 2 0
+1.0
+*Main> fastExp1 2 3
+8.0
+*Main> fastExp1 2.5 3
+15.625
+*Main> fastExp2 2 0
+1.0
+*Main> fastExp2 2 3
+8.0
+*Main> fastExp2 2.5 3
+15.625
+*Main> fastExp3 2 0
+1.0
+*Main> fastExp3 2 3
+8.0
+*Main> fastExp3 2.5 3
+15.625
+*Main> 
+

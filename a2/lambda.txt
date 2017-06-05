@@ -1,0 +1,26 @@
+Name : Huang Jiaming
+NSID : jih211
+StuId: 11207964
+
+
+Given: (from tutorial)
+true = \x.\y.(x)
+false = \x.\y.(y)
+not = \v.\w.\x.(v x w)
+or = \v.\w.(v v w)
+and = \v.\w.(v w v)
+
+
+and true (not true) = \v.\w.(v w v) true (not true)
+                    = \w.(true w true) (not true)
+                    = true (not true) true
+                    = \x.\y.(x) (not true) true
+                    = \y.(not true) true
+                    = not true
+                    = \v.\w.\x.(v x w) true
+                    = \w.\x.(true x w)
+                    = \w.\x.(\a.\b.(a) x w)
+                    = \w.\x.(\b.(x) w)
+                    = \w.\x.(x)
+                    = \x.\y.(y)
+                    = false
